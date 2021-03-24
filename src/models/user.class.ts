@@ -2,6 +2,7 @@ export class User {
   firstName: string;
   lastName: string;
   birthDate: number;
+  email: string;
   street: string;
   housenumber: number;
   zipCode: number;
@@ -10,6 +11,7 @@ export class User {
   constructor(obj?: any) {
     this.firstName = obj ? obj.firstName : '';
     this.lastName = obj ? obj.lastName : '';
+    this.email = obj ? obj.email : '';
     this.birthDate = obj ? obj.birthDate : '';
     this.street = obj ? obj.street : '';
     this.housenumber = obj ? obj.housenumber : '';
@@ -22,6 +24,7 @@ export class User {
       firstName: this.firstName,
       lastName: this.lastName,
       birthDate: this.birthDate,
+      email: this.email,
       street: this.street,
       housenumber: this.housenumber,
       zipCode: this.zipCode,

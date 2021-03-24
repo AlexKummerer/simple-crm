@@ -12,12 +12,20 @@
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-                <mat-label>First Name</mat-label>
+                <mat-label>Last Name</mat-label>
                 <input [disabled]="loading" [(ngModel)]="user.lastName" matInput placeholder="Placeholder" required />
 
                 <!--  <mat-hint>Please enter a Name</mat-hint>-->
             </mat-form-field>
         </div>
+
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Youre Email</mat-label>
+            <input [disabled]="loading" [(ngModel)]="user.email" matInput placeholder="Placeholder" required />
+
+        </mat-form-field>
+
+
 
         <div>
             <mat-form-field class="full-width" appearance="fill">
