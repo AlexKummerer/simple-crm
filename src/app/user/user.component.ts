@@ -16,16 +16,14 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.firestore
       .collection('users')
-      .valueChanges({idField: 'customIdName'})
+      .valueChanges({ idField: 'customIdName' })
       .subscribe((changes: any) => {
         this.allUsers = changes;
-        console.log('changes ',changes)
+        console.log('changes ', changes);
       });
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogAddUserComponent, {
-     
-    });
+    const dialogRef = this.dialog.open(DialogAddUserComponent, {});
   }
 }

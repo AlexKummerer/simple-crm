@@ -1,1 +1,42 @@
-<p>dialog-edit-address works!</p>
+<div class="dialog-container">
+
+    <h1 mat-dialog-title> Edit address </h1>
+    <div mat-dialog-content>
+
+
+        <div class="full-width">
+            <mat-form-field class="mr-1r" appearance="outline">
+                <mat-label>Street</mat-label>
+                <input [(ngModel)]="user.street" matInput placeholder="Placeholder" required />
+
+                <!--  <mat-hint>Please enter a Name</mat-hint>-->
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label> House Number</mat-label>
+                <input [(ngModel)]="user.housenumber" matInput placeholder="Placeholder" required />
+
+                <!--  <mat-hint>Please enter a Name</mat-hint>-->
+            </mat-form-field>
+        </div>
+
+
+        <div class="full-width">
+            <mat-form-field class="mr-1r" appearance="outline">
+                <mat-label>Zip code</mat-label>
+                <input [(ngModel)]="user.zipCode" matInput required #postalCode maxlength="5" placeholder="Ex. 94105" />
+                <mat-hint align="end">{{ postalCode.value.length }} / 5</mat-hint>
+
+                <!--  <mat-hint>Please enter a Name</mat-hint>-->
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>City</mat-label>
+                <input [(ngModel)]="user.city" matInput placeholder="Placeholder" required />
+
+                <!--  <mat-hint>Please enter a Name</mat-hint>-->
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="dialogRef.close()">Cancel</button>
+        <button mat-button cdkFocusInitial (click)="saveUser()">Save</button>
+    </div>

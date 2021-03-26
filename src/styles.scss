@@ -23,3 +23,14 @@ body {
 .mt-2r {
     margin-top: 2rem;
 }
+
+.dialog-container {
+    position: relative;
+    mat-progress-bar {
+        position: absolute;
+        left: -24px;
+        right: -24px;
+        top: -24px;
+        width: calc(100% + 48px);
+    }
+}
