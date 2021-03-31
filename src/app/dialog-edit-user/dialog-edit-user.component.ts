@@ -18,9 +18,13 @@ export class DialogEditUserComponent implements OnInit {
     private firestore: AngularFirestore
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.birthDate = new Date(this.user.birthDate);
+  }
 
   saveUser() {
+    console.log(this.birthDate);
+    this.user.birthDate = new Date(this.birthDate).getTime()
     this.firestore
       .collection('users')
       .doc(this.userId)
