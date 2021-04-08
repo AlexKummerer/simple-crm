@@ -9,7 +9,9 @@ describe('workspace-project App', () => {
   });
 
   it('should display welcome message', async () => {
+    console.log('Navigating to main page');
     await page.navigateTo();
+    console.log('Navigated to page');
     expect(await page.getTitleText()).toEqual('simple-crm app is running!');
   });
 
